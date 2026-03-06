@@ -125,7 +125,7 @@ Skill tool -> "seo-audit"
 trafego/
 ├── README.md           # Este arquivo
 ├── CLAUDE.md           # Configuracao do projeto para o Claude Code
-└── .claude/
+└── claude/
     └── skills/         # 42 skills especializadas
         ├── paid-ads/
         ├── seo-*/
