@@ -3,6 +3,11 @@
 Projeto de gestao e analise de trafego pago e organico.
 Foco: Meta Ads, Google Ads, SEO, CRO, Analytics.
 
+## Localizacao das Skills
+
+Todas as skills estao em `claude/skills/` na raiz do projeto.
+Para carregar uma skill, leia o arquivo `claude/skills/{nome-da-skill}/SKILL.md`.
+
 ## Skills Disponiveis
 
 ### Trafego Pago
@@ -63,7 +68,13 @@ Foco: Meta Ads, Google Ads, SEO, CRO, Analytics.
 
 ## Uso
 
-Carregar skill antes de executar qualquer tarefa:
+Antes de executar qualquer tarefa, leia a skill correspondente:
+```
+Read claude/skills/paid-ads/SKILL.md
+Read claude/skills/seo-audit/SKILL.md
+```
+
+Ou via Skill tool se disponivel:
 ```
 Skill tool -> "paid-ads"
 Skill tool -> "seo-audit"
