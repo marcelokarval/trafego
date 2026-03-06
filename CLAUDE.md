@@ -3,6 +3,34 @@
 Projeto de gestao e analise de trafego pago e organico.
 Foco: Meta Ads, Google Ads, SEO, CRO, Analytics.
 
+## Memoria Persistente
+
+O arquivo `claude/memory/MEMORY.md` armazena contexto entre sessoes.
+
+### Como funciona
+- O Claude DEVE ler `claude/memory/MEMORY.md` no inicio de cada sessao para recuperar contexto anterior.
+- Ao longo da sessao, o Claude DEVE atualizar o arquivo com novos aprendizados, decisoes e insights relevantes.
+- Ao final de uma sessao ou apos concluir uma tarefa importante, o Claude DEVE salvar o que aprendeu.
+
+### O que salvar na memoria
+- Contas de anuncio descobertas e seus IDs
+- Padroes de performance observados (ex: "campanha X tem CPA alto por causa de Y")
+- Preferencias do usuario (formato de relatorio, metricas preferidas, etc)
+- Decisoes de projeto tomadas
+- Erros encontrados e como foram resolvidos
+- Tokens e credenciais NAO devem ser salvos (seguranca)
+
+### O que NAO salvar
+- Tokens de acesso, senhas ou credenciais
+- Dados temporarios de uma unica sessao que nao serao reutilizados
+- Informacoes que ja estao documentadas nas skills
+
+### Como melhorar a memoria
+- Organize por topicos (contas, aprendizados, preferencias, decisoes)
+- Mantenha conciso — remova informacoes desatualizadas
+- Se a memoria ficar grande, crie arquivos separados em `claude/memory/` (ex: `contas-meta.md`, `insights-seo.md`) e referencie no MEMORY.md
+- Atualize em vez de duplicar — se uma informacao ja existe, edite-a
+
 ## Localizacao das Skills
 
 Todas as skills estao em `claude/skills/` na raiz do projeto.
